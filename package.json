@@ -1,0 +1,46 @@
+{
+  "name": "landing-2024-03-20",
+  "version": "1.0.0",
+  "description": "Landing page",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "folders": "mkdir ./dist",
+    "build:templates": "pug ./src/templates/pages --out ./dist --basedir ./src/templates",
+    "build:styles": "postcss ./src/styles/**/[^_]*.scss --dir ./dist/styles --ext css --base ./src/styles",
+    "build:scripts": "./node_modules/.bin/babel ./src/scripts --out-dir dist/scripts",
+    "build:static": "cp -r ./src/static/* ./dist | true",
+    "build:images": "cp -r ./src/images/* ./dist | true",
+    "watch:templates": "npm run build:templates -- --watch",
+    "watch:styles": "npm run build:styles -- --watch",
+    "watch:scripts": "npm run build:scripts -- --watch",
+    "watch:server": "bash ./utils/wait-template.sh && cd dist && live-server",
+    "init": "npm run clean && npm run folders",
+    "build": "npm run init && run-p build:*",
+    "watch": "npm run init && npm run build:static && npm run build:images && run-p watch:*"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "markup",
+    "template",
+    "front-end"
+  ],
+  "author": "Artem Grachov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@csstools/postcss-sass": "^5.1.1",
+    "autoprefixer": "^10.4.18",
+    "babel-preset-minify": "^0.5.2",
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.71.1"
+  }
+}
