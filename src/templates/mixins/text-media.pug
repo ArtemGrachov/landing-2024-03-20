@@ -1,0 +1,38 @@
+mixin text-media(options)
+  .TextMedia(class=options.modifier)
+    .Container
+      .TextMedia-row
+        .TextMedia-col
+          if options.reversed
+            +text-media-media(options)
+          else
+            +text-media-text(options)
+        .TextMedia-col
+          if options.reversed
+            +text-media-text(options)
+          else
+            +text-media-media(options)
+
+mixin text-media-text(options)
+  .TextMedia-title #{options.title}
+  .TextMedia-content #{options.content}
+  a.TextMedia-link.Button(href=options.link.url class=options.link.modifier) #{options.link.title}
+
+mixin text-media-media(options)
+  case options.mediaType
+    when 'youtube'
+      +text-media-youtube(options)
+    default
+      +text-media-image(options)
+
+mixin text-media-image(options)
+  .TextMedia-image-wrap
+    img.TextMedia-image(src=options.media.url)
+
+mixin text-media-youtube(options)
+  iframe.TextMedia-iframe(
+    src=options.media.url
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  )

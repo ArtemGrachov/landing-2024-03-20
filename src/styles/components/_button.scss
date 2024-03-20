@@ -24,8 +24,59 @@
     border-color: map-get($base-colors, 'primary');
 
     &:hover {
-      background-color: lighten(map-get($base-colors, 'primary'), 10);
-      border-color: lighten(map-get($base-colors, 'primary'), 10);
+      background-color: map-get($base-colors, 'primary-hover');
+      border-color: map-get($base-colors, 'primary-hover');
+    }
+
+    &:active {
+      background-color: map-get($base-colors, 'primary-active');
+      border-color: map-get($base-colors, 'primary-active');
+    }
+  }
+
+  &--outlined {
+    color: map-get($base-colors, 'primary');
+    border-color: map-get($base-colors, 'primary');
+
+    &:hover {
+      background-color: map-get($base-colors, 'primary');
+      color: map-get($base-colors, 'alternative');
+    }
+
+    &:active {
+      background-color: map-get($base-colors, 'primary-active');
+      color: map-get($base-colors, 'alternative-active');
+    }
+  }
+
+  &--alternative {
+    color: map-get($base-colors, 'primary');
+    background-color: map-get($base-colors, 'alternative');
+    border-color: map-get($base-colors, 'alternative');
+
+    &:hover {
+      background-color: map-get($base-colors, 'alternative-hover');
+      border-color: map-get($base-colors, 'alternative-hover');
+    }
+
+    &:active {
+      background-color: map-get($base-colors, 'alternative-active');
+      border-color: map-get($base-colors, 'alternative-active');
+    }
+  }
+
+  &--outlined-alternative {
+    color: map-get($base-colors, 'alternative');
+    border-color: map-get($base-colors, 'alternative');
+
+    &:hover {
+      background-color: map-get($base-colors, 'alternative');
+      color: map-get($base-colors, 'primary');
+    }
+
+    &:active {
+      background-color: map-get($base-colors, 'alternative-active');
+      color: map-get($base-colors, 'primary-active');
     }
   }
 }

@@ -2,5 +2,11 @@ $base-colors: (
   'primary': black,
   'alternative': white,
   'secondary': grey,
-  'background': white
+  'background': white,
+  'primary-hover': lighten(black, 25),
+  'alternative-hover': darken(white, 25),
+  'secondary-hover': darken(grey, 25),
+  'primary-active': lighten(black, 30),
+  'alternative-active': darken(white, 30),
+  'secondary-active': darken(grey, 30)
 );

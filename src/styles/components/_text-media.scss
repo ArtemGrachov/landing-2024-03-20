@@ -1,0 +1,61 @@
+@import '../utils/grid';
+
+$gap: 48px;
+
+.TextMedia {
+  padding: 72px 0;
+
+  &-row {
+    @include grid-row($gap);
+    align-items: center;
+  }
+  
+  &-col {
+    @include grid-col($gap);
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  &-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: map-get($base-colors, 'alternative');
+    background-color: map-get($base-colors, 'primary');
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 1;
+    display: inline-block;
+  }
+
+  &-content {
+    margin: 0 0 16px;
+
+    * {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &--primary {
+    color: map-get($base-colors, 'alternative');
+    background-color: map-get($base-colors, 'primary');
+
+    .TextMedia {
+      &-title {
+        color: map-get($base-colors, 'primary');
+        background-color: map-get($base-colors, 'alternative');
+      }
+    }
+  }
+}
