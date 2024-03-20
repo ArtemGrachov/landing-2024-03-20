@@ -1,11 +1,7 @@
+include /mixins/carousel.pug
+
 mixin gallery(id, slides)
-  .Gallery
-    .splide(id=id)
-      .splide__arrows
-        button.splide__arrow.splide__arrow--prev
-        button.splide__arrow.splide__arrow--next
-      .splide__track
-        ul.splide__list
-          each slide in slides
-            li.splide__slide
-              img.Gallery-image(src=slide.src)
+  +carousel(id)
+    each slide in slides
+      li.splide__slide
+        img.Gallery-image(src=slide.src)

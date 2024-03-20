@@ -1,0 +1,34 @@
+include /mixins/carousel.pug
+include /mixins/testimonials-card.pug
+
+-
+  var testimonials = [
+    {
+      text: 'Tempore ab nam maiores nesciunt voluptates tempora at, adipisci alias minus corrupti ipsam repellendus, neque eius praesentium doloribus nulla veniam. Accusantium, itaque?',
+      author: {
+        name: 'Lorem Ipsum',
+        description: 'Dolor sit amet consectetur adipisicing elit'
+      }
+    },
+    {
+      text: 'Consequuntur expedita nobis saepe dolorum commodi dolore atque deserunt, ad eaque nemo consequatur similique voluptates voluptatum debitis suscipit quod itaque consectetur quibusdam!',
+      author: {
+        name: 'Eligendi Quibusdam',
+        description: 'Porro reprehenderit obcaecati quam quia sapiente'
+      }
+    },
+    {
+      text: 'Saepe animi dolor totam facilis ex illo sapiente vitae error eos accusamus officia vero temporibus, deleniti facere. Harum porro itaque odio numquam.',
+      author: {
+        name: 'Incidunt Explicabo',
+        description: 'Ea voluptas, aperiam consequatur'
+      }
+    },
+  ]
+
+section.Testimonials
+  .Container
+    +carousel("testimonials-carousel")
+      each item in testimonials
+        li.splide__slide
+          +testimonials-card(item)

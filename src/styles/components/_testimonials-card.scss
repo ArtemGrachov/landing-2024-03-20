@@ -1,0 +1,26 @@
+@import '../config/colors';
+
+.TestimonialsCard {
+  padding: 48px;
+  text-align: center;
+
+  &-text {
+    font-size: 18px;
+    line-height: 1.8;
+    font-style: italic;
+    color: map-get($base-colors, 'primary');
+    margin-bottom: 16px;
+  }
+
+  &-author-name {
+    color: map-get($base-colors, 'secondary');
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  &-author-description {
+    color: map-get($base-colors, 'secondary');
+    font-size: 14px;
+    font-style: italic;
+  }
+}
