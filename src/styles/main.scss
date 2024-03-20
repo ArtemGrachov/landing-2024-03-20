@@ -1,3 +1,6 @@
+@import './components/container.scss';
+@import './components/button.scss';
+
 *,
 *:before,
 *:after {
@@ -8,4 +11,10 @@ html,
 body {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }

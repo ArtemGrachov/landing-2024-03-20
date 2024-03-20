@@ -1,20 +1,19 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
-    link(rel="stylesheet", href="/styles/main.css")
-  body
-    h1 Landing 2024-03-20
-    h2 Navigation
-    h2 Mobile navigation
-    h2 Hero block
-    h2 Features
-    h2 Text and media
-    h2 Gallery
-    h2 Pricing
-    h2 Testimonials
-    h2 Contact us
-    h2 Subscribe
-    h2 Footer
+extends /layouts/main.pug
+
+block head-link
+  link(rel="stylesheet", href="/styles/index.css")
+
+block page
+  include /blocks/hero.pug
+  h1 Landing 2024-03-20
+  h2 Navigation
+  h2 Mobile navigation
+  h2 Hero block
+  h2 Features
+  h2 Text and media
+  h2 Gallery
+  h2 Pricing
+  h2 Testimonials
+  h2 Contact us
+  h2 Subscribe
+  h2 Footer

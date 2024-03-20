@@ -40,3 +40,6 @@ Both commands handle code the same way.
 
 ## Utils
 Currently there is only one utility file - `utils/wait-template.sh`, a small scripts to wait until `dist/index.html` file is created. It is necessary for starting `live-server` in `watch` mode only when index file is created, to avoid showing 404 error.
+
+## Images
+- Photo by Maryia Plashchynskaya: https://www.pexels.com/photo/aerial-photo-of-a-city-3442567/

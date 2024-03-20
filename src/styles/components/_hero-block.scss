@@ -1,0 +1,29 @@
+@import '../config/colors';
+
+.HeroBlock {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &-heading {
+    color: map-get($base-colors, 'alternative');
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &-subheading {
+    color: map-get($base-colors, 'primary');
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0 0 16px;
+  }
+}
