@@ -1,14 +1,16 @@
+@import '../config/colors';
+
 .Card {
   padding: 32px;
-  border: 1px solid black;
+  border: 1px solid map-get($base-colors, 'primary');
   height: 100%;
 
   &-title {
     font-size: 24px;
     font-weight: 700;
     margin: 0 0 16px;
-    background: black;
-    color: white;
+    background: map-get($base-colors, 'primary');
+    color: map-get($base-colors, 'alternative');
     font-family: "Roboto Condensed", sans-serif;
     line-height: 1;
   }
