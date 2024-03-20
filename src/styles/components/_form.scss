@@ -1,0 +1,18 @@
+.Form {
+  &-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  &-field {
+    margin-bottom: 16px;
+  }
+
+  &-submit-row {
+    display: flex;
+    justify-content: center;
+  }
+}
