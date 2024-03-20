@@ -1,0 +1,18 @@
+@use 'sass:math';
+
+@mixin grid-row($gap-y, $gap-x: null) {
+  @if ($gap-x == null) {
+    $gap-x: $gap-y;
+  }
+
+  display: flex;
+  margin: math.div(-$gap-y, 2) math.div(-$gap-x, 2);
+}
+
+@mixin grid-col($gap-y, $gap-x: null) {
+  @if ($gap-x == null) {
+    $gap-x: $gap-y;
+  }
+
+  padding: math.div($gap-y, 2) math.div($gap-x, 2);
+}

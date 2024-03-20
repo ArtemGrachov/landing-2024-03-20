@@ -1,0 +1,14 @@
+@import '../config/colors';
+
+.Navigation {
+  background-color: map-get($base-colors, 'primary');
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  &-inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

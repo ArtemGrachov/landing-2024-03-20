@@ -1,0 +1,31 @@
+@import '../config/colors';
+@import '../utils/grid';
+
+$gap: 16px;
+
+.NavLinks {
+  &-item {
+    @include grid-col(0, $gap);
+  }
+
+  &-link {
+    display: block;
+    text-decoration: none;
+    color: map-get($base-colors, 'alternative');
+    font-weight: 500;
+    font-size: 16px;
+    padding: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-list {
+    @include grid-row(0, $gap);
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
