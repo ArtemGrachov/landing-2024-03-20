@@ -1,0 +1,103 @@
+@import '../config/colors';
+@import '../config/_common.scss';
+
+.splide {
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background: none;
+    z-index: 1;
+    background-color: map-get($base-colors, 'alternative');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      background-color: map-get($base-colors, 'alternative-hover');
+    }
+
+    &:active {
+      background-color: map-get($base-colors, 'alternative-active');
+    }
+
+    &:before {
+      display: block;
+      border-style: solid;
+      border-color: transparent;
+      border-top-width: 16px;
+      border-bottom-width: 16px;
+      content: '';
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      background-color: map-get($base-colors, 'alternative');
+      cursor: not-allowed;
+    }
+
+    &--prev {
+      left: 32px;
+
+      &:before {
+        border-left-width: 0;
+        border-right-color: map-get($base-colors, 'primary');
+        border-right-width: 24px;
+      }
+    }
+
+    &--next {
+      right: 32px;
+
+      &:before {
+        border-right-width: 0;
+        border-left-color: map-get($base-colors, 'primary');
+        border-left-width: 24px;
+      }
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0 8px;
+    }
+
+    &__page {
+      border: none;
+      width: 16px;
+      height: 16px;
+      background-color: map-get($base-colors, 'alternative');
+      border: 1px solid map-get($base-colors, 'primary');
+      display: block;
+      border-radius: 50%;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        background-color: map-get($base-colors, 'alternative-hover');
+      }
+  
+      &:active {
+        background-color: map-get($base-colors, 'alternative-active');
+      }
+
+      &.is-active {
+        background: map-get($base-colors, 'primary');
+        border-color: map-get($base-colors, 'alternative');
+      }
+    }
+  }
+}
