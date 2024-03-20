@@ -47,6 +47,21 @@ $gap: 48px;
     }
   }
 
+  &-iframe-wrap {
+    position: relative;
+    padding-top: 60%;
+  }
+
+  &-iframe {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   &--primary {
     color: map-get($base-colors, 'alternative');
     background-color: map-get($base-colors, 'primary');
