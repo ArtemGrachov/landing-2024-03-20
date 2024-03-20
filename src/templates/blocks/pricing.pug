@@ -1,0 +1,11 @@
+include ../mixins/pricing-card.pug
+
+section.Pricing
+  .Container
+    ul.Pricing-grid
+      li.Pricing-col
+        +pricing-card('Beginner', 'Free')
+      li.Pricing-col
+        +pricing-card('Advanced', '$10 / month', true)
+      li.Pricing-col
+        +pricing-card('Pro', '$25 / month')

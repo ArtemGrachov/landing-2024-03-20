@@ -1,0 +1,20 @@
+@import '../utils/grid';
+
+$grid-gap: 32px;
+
+.Pricing {
+  padding: 72px 0;
+
+  &-grid {
+    @include grid-row($grid-gap);
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+
+  &-col {
+    @include grid-col($grid-gap);
+    flex: 0 0 auto;
+    width: 320px;
+  }
+}

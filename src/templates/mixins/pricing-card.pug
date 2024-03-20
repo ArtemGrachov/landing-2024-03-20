@@ -1,0 +1,10 @@
+mixin pricing-card(title, price, highlighted)
+  .PricingCard(class=highlighted ? 'PricingCard--highlighted' : '')
+    .PricingCard-title #{title}
+    ul.PricingCard-features
+      li.PricingCard-features-item Lorem ipsum dolor
+      li.PricingCard-features-item Sit amet consectetur provident
+      li.PricingCard-features-item Adipisicing elit
+      li.PricingCard-features-item Aperiam et in error ipsum
+      li.PricingCard-features-item Distinctio vero laboriosam
+    .PricingCard-price #{price}

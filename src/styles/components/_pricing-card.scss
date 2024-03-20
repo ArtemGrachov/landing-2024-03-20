@@ -1,0 +1,52 @@
+@import '../config/colors';
+
+.PricingCard {
+  padding: 16px;
+  border: 1px solid map-get($base-colors, 'primary');
+
+  &-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    background: map-get($base-colors, 'primary');
+    color: map-get($base-colors, 'alternative');
+    font-family: "Roboto Condensed", sans-serif;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  &-features-item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-price {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  &--highlighted {
+    background: map-get($base-colors, 'primary');
+    color: map-get($base-colors, 'alternative');
+
+    .PricingCard {
+      &-title {
+        background: map-get($base-colors, 'alternative');
+        color: map-get($base-colors, 'primary');
+      }
+    }
+  }
+}
