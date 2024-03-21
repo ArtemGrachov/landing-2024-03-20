@@ -1,0 +1,60 @@
+@import '../config/colors';
+@import '../utils/grid';
+
+$grid-gap: 48px;
+
+.Footer {
+  background: map-get($base-colors, 'primary');
+  color: map-get($base-colors, 'alternative');
+  font-size: 16px;
+  padding: 72px 0 32px;
+
+  &-top {
+    margin-bottom: 48px;
+  }
+
+  &-grid {
+    @include grid-row($grid-gap);
+    align-items: stretch
+  }
+
+  &-col {
+    @include grid-col($grid-gap);
+    width: 25%;
+    flex: 0 0 auto;
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 32px;
+    background: map-get($base-colors, 'alternative');
+    color: map-get($base-colors, 'primary');
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  &-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-item {
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    color: map-get($base-colors, 'alternative');
+    font-weight: 700;
+  }
+
+  &-details {
+    font-size: 12px;
+    text-align: right;
+  }
+}
