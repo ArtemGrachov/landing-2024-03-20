@@ -1,0 +1,15 @@
+@import '../config/colors';
+
+.Subscribe {
+  padding: 72px;
+
+  &-title {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0 0 16px;
+  }
+
+  &-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
