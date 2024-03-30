@@ -1,4 +1,5 @@
 @import '../config/colors';
+@import '../config/breakpoints';
 
 .Navigation {
   background-color: map-get($base-colors, 'primary');
@@ -9,7 +10,28 @@
   z-index: 20;
 
   &-inner {
+    display: none;
+
+    @media (min-width: map-get($breakpoints, 'tablet')) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &-mobile {
+    @media (min-width: map-get($breakpoints, 'tablet')) {
+      display: none;
+    }
+  }
+
+  &-menu {
+    width: 40px;
+    height: 40px;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: white;
   }
 }
