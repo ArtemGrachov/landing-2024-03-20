@@ -137,7 +137,7 @@ function initModalMenu() {
   const modalMenu = new ModalWindow('MOBILE_MENU', '#mobile-menu', 'ModalWindow--active', 'ModalWindow--hidden');
 
   const openTriggers = document.querySelectorAll('#mobile-menu-trigger');
-  const closeTriggers = document.querySelectorAll('#mobile-menu-close');
+  const closeTriggers = document.querySelectorAll('#mobile-menu-close, #mobile-menu .NavLinks-link');
 
   initModalControls(modalMenu, openTriggers, closeTriggers);
 }
