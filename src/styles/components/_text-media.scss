@@ -1,5 +1,6 @@
 @import '../utils/grid';
 @import '../config/breakpoints';
+@import '../config/layout';
 
 $gap: 24px;
 $gap-desktop: 48px;
@@ -8,7 +9,7 @@ $gap-desktop: 48px;
   padding: 72px 0;
 
   &-row {
-    @media (min-width: map-get($breakpoints, 'mobile')) {
+    @media (min-width: map-get($breakpoints, 'tablet')) {
       @include grid-row($gap);
       align-items: center;
     }
@@ -25,7 +26,7 @@ $gap-desktop: 48px;
       margin-bottom: 0;
     }
 
-    @media (min-width: map-get($breakpoints, 'mobile')) {
+    @media (min-width: map-get($breakpoints, 'tablet')) {
       @include grid-col($gap);
       flex: 0 0 auto;
       width: 50%;
@@ -71,6 +72,23 @@ $gap-desktop: 48px;
   &-iframe-wrap {
     position: relative;
     padding-top: 60%;
+    margin-left: -$container-padding;
+    margin-right: -$container-padding;
+
+    @media (min-width: map-get($breakpoints, 'mobile')) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &-image-wrap {
+    margin-left: -$container-padding;
+    margin-right: -$container-padding;
+
+    @media (min-width: map-get($breakpoints, 'mobile')) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &-iframe {
