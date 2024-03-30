@@ -1,5 +1,6 @@
 @import '../config/colors';
 @import '../utils/grid';
+@import '../config/breakpoints';
 
 $grid-gap: 48px;
 
@@ -14,14 +15,24 @@ $grid-gap: 48px;
   }
 
   &-grid {
-    @include grid-row($grid-gap);
-    align-items: stretch
+    @media (min-width: map-get($breakpoints, 'mobile')) {
+      @include grid-row($grid-gap);
+      align-items: stretch;
+    }
   }
 
   &-col {
-    @include grid-col($grid-gap);
-    width: 25%;
-    flex: 0 0 auto;
+    margin-bottom: $grid-gap;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: map-get($breakpoints, 'mobile')) {
+      @include grid-col($grid-gap);
+      width: 25%;
+      flex: 0 0 auto;
+    }
   }
 
   &-title {
@@ -55,6 +66,10 @@ $grid-gap: 48px;
 
   &-details {
     font-size: 12px;
-    text-align: right;
+    text-align: center;
+
+    @media (min-width: map-get($breakpoints, 'mobile')) {
+      text-align: right;
+    }
   }
 }

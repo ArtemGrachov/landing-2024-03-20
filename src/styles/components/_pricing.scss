@@ -1,4 +1,5 @@
 @import '../utils/grid';
+@import '../config/breakpoints';
 
 $grid-gap: 32px;
 
@@ -6,15 +7,27 @@ $grid-gap: 32px;
   padding: 72px 0;
 
   &-grid {
-    @include grid-row($grid-gap);
-    justify-content: center;
     list-style: none;
     padding: 0;
+    margin: 0;
+
+    @media (min-width: map-get($breakpoints, 'mobile')) {
+      @include grid-row($grid-gap);
+      justify-content: center;
+    }
   }
 
   &-col {
-    @include grid-col($grid-gap);
-    flex: 0 0 auto;
-    width: 320px;
+    margin-bottom: $grid-gap;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: map-get($breakpoints, 'mobile')) {
+      @include grid-col($grid-gap);
+      flex: 0 0 auto;
+      width: 320px;
+    }
   }
 }
