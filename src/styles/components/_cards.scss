@@ -30,8 +30,12 @@ $list-gap: 32px;
     @media (min-width: map-get($breakpoints, 'mobile')) {
       @include grid-col($list-gap);
       margin-bottom: 0;
-      width: 30%;
       flex: 0 0 auto;
+      width: 50%;
+    }
+
+    @media (min-width: map-get($breakpoints, 'desktop')) {
+      width: 30%;
     }
   }
 }

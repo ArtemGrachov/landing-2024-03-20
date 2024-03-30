@@ -14,6 +14,7 @@ $grid-gap: 32px;
     @media (min-width: map-get($breakpoints, 'mobile')) {
       @include grid-row($grid-gap);
       justify-content: center;
+      flex-wrap: wrap;
     }
   }
 
@@ -27,6 +28,10 @@ $grid-gap: 32px;
     @media (min-width: map-get($breakpoints, 'mobile')) {
       @include grid-col($grid-gap);
       flex: 0 0 auto;
+      width: 50%;
+    }
+
+    @media (min-width: map-get($breakpoints, 'mobile')) {
       width: 320px;
     }
   }
