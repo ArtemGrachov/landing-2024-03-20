@@ -1,11 +1,16 @@
 @use 'sass:math';
 @import '../config/colors';
+@import '../config/layout';
 
 .MobileMenu {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   height: 100%;
+
+  &-header {
+    padding: 8px $container-padding;
+  }
 
   &-close {
     $size: 30px;
